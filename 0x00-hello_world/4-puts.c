@@ -8,9 +8,9 @@
  */
 #include <stdio.h>
 /**
- * main : print with puts
- * no variable declared
- * return: 0
+ * main : Prints "Programming is like building a multilingual puzzle
+ * @ - no variable declared
+ * Return: 0
  */
 int main(void)
 {
