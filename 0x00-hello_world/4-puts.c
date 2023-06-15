@@ -8,8 +8,8 @@
  */
 #include <stdio.h>
 /**
- * main : Prints "Programming is like building a multilingual puzzle
- * @ - no variable declared
+ * main - Prints a string with puts
+ *
  * Return: 0
  */
 int main(void)
