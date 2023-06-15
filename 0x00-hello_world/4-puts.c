@@ -8,10 +8,15 @@
  */
 
 #include <stdio.h>
+/**
+ * main : print with puts
+ * no variable declared
+ * return: 0
+ */
+int main(void)
+{
 
-int main(){
-
-	puts( "\"Programming is like building a multilingual puzzle\n" );
+	puts( "\"Programming is like building a multilingual puzzle" );
 
 	return 0;
 }
