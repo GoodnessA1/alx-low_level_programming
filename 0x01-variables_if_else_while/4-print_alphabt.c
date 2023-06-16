@@ -9,6 +9,7 @@
 int main(void)
 {
 	char ch;
+
 	for (ch = 97; ch <= 97 + 25; ch++)
 	{
 		if (ch == 'e')
