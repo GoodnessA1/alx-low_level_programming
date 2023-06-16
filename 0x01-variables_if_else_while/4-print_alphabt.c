@@ -1,7 +1,14 @@
-#include <stdio.h>                                         /**
- * main - Prints letter of the alphabet                     * @ch: char                                                *                                                          * Return: Always 0 (Successful)                            */                                                        
+#include <stdio.h>
+/**
+ * main - Print letter of alphabet minus e and q
+ * @ch: char
+ *
+ * Return: 0
+ */
+
 int main(void)
-{                                                                  char ch;                                           
+{
+	char ch;
         for (ch = 97; ch <= 97 + 25; ch++)
 	{
 		if (ch == 'e')
