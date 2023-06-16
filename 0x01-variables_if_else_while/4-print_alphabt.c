@@ -9,7 +9,7 @@
 int main(void)
 {
 	char ch;
-        for (ch = 97; ch <= 97 + 25; ch++)
+	for (ch = 97; ch <= 97 + 25; ch++)
 	{
 		if (ch == 'e')
 			continue;
@@ -17,4 +17,7 @@ int main(void)
 			continue;
 		putchar(ch);
 	}
-	putchar('\n');                                             return (0);                                        }
+	putchar('\n');
+
+	return (0);
+}
