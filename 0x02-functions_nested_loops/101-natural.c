@@ -3,7 +3,7 @@
 
 void sum_of_numbers(void);
 /**
- * sum_of_numbers - Adds all numbers that are divisible by 3 or 5 and less than 1024
+ * sum_of_numbers - Sums numbers divisible by 3 or 5
  * @n: starts the sum
  * @sum: initialized to zero
  *
