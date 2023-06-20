@@ -3,6 +3,9 @@
 int print_last_digit(int);
 /**
  * print_last_digit - check the code
+ * @n: integer
+ * @t: integer
+ * @a: integer
  *
  * Return: last digit of the number
  */
@@ -17,20 +20,4 @@ int print_last_digit(int n)
 	_putchar(t + '0');
 
 	return t;
-}
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
-int main(void)
-{
-	int r;
-
-	print_last_digit(98);
-	print_last_digit(0);
-	r = print_last_digit(-1024);
-	_putchar('0' + r);
-	_putchar('\n');
-	return (0);
 }

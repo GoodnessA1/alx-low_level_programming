@@ -2,15 +2,10 @@
 
 void jack_bauer(void);
 /**
- * main - check the code
- *
- * Return: Always 0
+ * jack_bauer - prints time
+ * @i: integer
+ * @j: integer
  */
-int main(void)
-{
-	jack_bauer();
-	return (0);
-}
 void jack_bauer(void)
 {
 
