@@ -1,6 +1,6 @@
 #include "main.h"
 
-int _islower(int c);
+int _isupper(int c);
 /**
  * _isupper - check the code.
  * @c: value tested
