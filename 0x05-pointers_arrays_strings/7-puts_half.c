@@ -20,7 +20,10 @@ void puts_half(char *str)
 	{
 		a = (i - 1) / 2;
 		for (; str[a] != '\0'; a++)
-			_putchar(str[a+1]);
+		{
+			if (str[a + 1] != '\0')
+				_putchar(str[a + 1]);
+		}
 	}
 	_putchar('\n');
 }
