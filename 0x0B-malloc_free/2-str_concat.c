@@ -11,7 +11,7 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *s, *j;
+	char *s;
 	int i, k, a = 0, b = 0;
 
 	while (s1 && s1[a])
@@ -40,7 +40,6 @@ char *str_concat(char *s1, char *s2)
 			i++;
 		}
 		s[i] = '\0';
-		j = s;
 	}
 	return (s);
 }
