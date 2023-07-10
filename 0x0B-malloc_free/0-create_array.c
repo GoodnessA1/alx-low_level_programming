@@ -15,20 +15,26 @@ char *create_array(unsigned int size, char c)
 	int a;
 	unsigned int i;
 
+	if (size == 0)
+	{
+		a = 0;
+		while (f[a] != '\0')
+		{
+			_putchar(f[a]);
+			a++;
+		}
+		return (NULL);
+	}
+
 	s = malloc(sizeof(char) * size);
+
 	if (s != NULL)
 	{
 		while (i < size)
 		{
-			s[i] = c;
+			s[i] = 0xc;
 			i++;
 		}
-	}
-	else
-	{
-		for (a = 0; f[a] != '\0'; a++)
-			_putchar(f[a]);
-		_putchar('\n');
 	}
 	return (s);
 }
