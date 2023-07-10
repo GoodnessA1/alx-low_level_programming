@@ -20,16 +20,19 @@ char *str_concat(char *s1, char *s2)
 		b++;
 
 	s = malloc(sizeof(char) * (a + b + 1));
+	if (s == NULL)
+		return (NULL);
 
-	if (s != NULL)
+	if (s1)
 	{
-		i = 0;
-		k = 0;
 		while (i < a)
 		{
 			s[i] = s1[i];
 			i++;
 		}
+	}
+	if (s2)
+	{
 		while (i < (a + b))
 		{
 			s[i] = s2[k];
@@ -39,7 +42,5 @@ char *str_concat(char *s1, char *s2)
 		s[i] = '\0';
 		j = s;
 	}
-	else
-		j == NULL;
-	return (j);
+	return (s);
 }
