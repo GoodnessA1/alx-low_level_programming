@@ -1,5 +1,7 @@
 #include <stdio.h>
+#ifndef FILENAME
 #define FILENAME __FILE__
+#endif
 /**
  * main - prints the name of a file
  *
@@ -9,5 +11,5 @@ int main(void)
 {
 	puts(FILENAME);
 
-	return(0);
+	return (0);
 }
