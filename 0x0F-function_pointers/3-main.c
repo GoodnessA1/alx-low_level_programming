@@ -13,7 +13,7 @@
 
 int main(int argc, char *argv[])
 {
-	char *s = argv[2];
+	char s = *argv[2];
 	int num1 = atoi(argv[1]);
 	int num2 = atoi(argv[3]);
 	int (*func)(int, int);
@@ -24,21 +24,20 @@ int main(int argc, char *argv[])
 		return (98);
 	}
 
-	func = get_op_func(s);
+	func = get_op_func(argv[2]);
 	if (!func)
 	{
 		printf("Error\n");
 		return(99);
 	}
-	while (strcmp(s, "/") == 0 || strcmp(s, "%") == 0)
+
+	if ((s == '/' || s == '%') && num2 == 0)
 	{
-		if (num2 == 0)
-		{
-			printf("Error\n");
-			return (100);
-		}
+		printf("Error\n");
+		exit(100);
 	}
 
-	printf("%i\n", func(num1, num2));
+
+	printf("%d\n", func(num1, num2));
 	return (0);
 }
