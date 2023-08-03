@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 /**
  * binary_to_uint - Bin to int
  * @b: param
@@ -10,7 +11,7 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int result, n;
 	int i;
 
-	if (b == NULL)
+	if (strcmp(b, "") == 0)
 		return (0);
 
 	for (i = 0; b[i]; i++)
@@ -19,7 +20,7 @@ unsigned int binary_to_uint(const char *b)
 			return (0);
 	}
 
-	for (result = 0, n = 1, n--; i >= 0; i++, n *= 2)
+	for (n = 1, result = 0, i--; i >= 0; i--, n *= 2)
 	{
 		if(b[i] == '1')
 			result += n;
