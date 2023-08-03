@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 int _pow(int base, int exp);
 int _atoi(const char *s);	
@@ -23,7 +22,7 @@ unsigned int binary_to_uint(const char *b)
 		if (b[n] != '0' && b[n] != '1')
 			return (0);
 	}
-	if (!b)
+	if (b == NULL)
 		return (0);
 
 	while (num != 0)
