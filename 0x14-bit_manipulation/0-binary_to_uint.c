@@ -1,7 +1,7 @@
 #include "main.h"
 
 int _pow(int base, int exp);
-int _atoi(const char *s);	
+int _atoi(const char *s);
 /**
  * binary_to_uint - Comverts bin string to dec
  * @b: binary string
@@ -17,7 +17,7 @@ unsigned int binary_to_uint(const char *b)
 	int n;
 	int num = _atoi(b);
 
-	for(n = 0; b[n] != '\0'; n++)
+	for (n = 0; b[n] != '\0'; n++)
 	{
 		if (b[n] != '0' && b[n] != '1')
 			return (0);
@@ -53,7 +53,7 @@ int _pow(int base, int exp)
 		--exp;
 	}
 
-	return result;
+	return (result);
 }
 
 
