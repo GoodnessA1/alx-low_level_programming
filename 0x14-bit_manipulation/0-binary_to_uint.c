@@ -1,103 +1,29 @@
 #include "main.h"
-
-int _pow(int base, int exp);
-int _atoi(const char *s);
+#include <string.h>
 /**
- * binary_to_uint - Comverts bin string to dec
- * @b: binary string
+ * binary_to_uint - Bin to int
+ * @b: param
  *
- * Return: 0
+ * Return: result
  */
 unsigned int binary_to_uint(const char *b)
 {
-	int uint = 0;
-	int i = 0;
-	int j = 0;
-	int k = 0;
-	int n;
-	int num = _atoi(b);
+	unsigned int result, n;
+	int i;
 
-	for (n = 0; b[n] != '\0'; n++)
+	if (strcmp(b, "") == 0)
+		return (0);
+
+	for (i = 0; b[i]; i++)
 	{
-		if (b[n] != '0' && b[n] != '1')
+		if (b[i] != '0' && b[i] != '1')
 			return (0);
 	}
-	if (b == NULL)
-		return (0);
 
-	while (num != 0)
+	for (n = 1, result = 0, i--; i >= 0; i--, n *= 2)
 	{
-		j = num % 10;
-		num /= 10;
-		i = j * (_pow(2, k));
-		k++;
-		uint = uint + i;
+		if(b[i] == '1')
+			result += n;
 	}
-	return (uint);
-}
-
-/**
- * _pow - Takes number to power
- * @base: Base to which power is taken
- * @exp: Ppwer to which base is raised
- *
- * Return: powered number
- */
-int _pow(int base, int exp)
-{
-	int result = 1;
-
-	while (exp != 0)
-	{
-		result = result * base;
-		--exp;
-	}
-
 	return (result);
-}
-
-
-/**
- * _atoi - converts a string to an integer
- * @s: string to be converted
- *
- * Return: the int converted from the string
- */
-int _atoi(const char *s)
-{
-	int i, d, n, len, f, digit;
-
-	i = 0;
-	d = 0;
-	n = 0;
-	len = 0;
-	f = 0;
-	digit = 0;
-
-	while (s[len] != '\0')
-		len++;
-
-	while (i < len && f == 0)
-	{
-		if (s[i] == '-')
-			++d;
-
-		if (s[i] >= '0' && s[i] <= '9')
-		{
-			digit = s[i] - '0';
-			if (d % 2)
-				digit = -digit;
-			n = n * 10 + digit;
-			f = 1;
-			if (s[i + 1] < '0' || s[i + 1] > '9')
-				break;
-			f = 0;
-		}
-		i++;
-	}
-
-	if (f == 0)
-		return (0);
-
-	return (n);
 }
